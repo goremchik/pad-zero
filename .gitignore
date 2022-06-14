@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.idea/
+.vscode/
+coverage/ 
+.env
+logs
+*.backup
+*.http
+.webpack
+*.docx
