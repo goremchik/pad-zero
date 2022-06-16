@@ -1,6 +1,6 @@
 {
   "name": "pad-zero",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pad zeros before number",
   "main": "dist/index.js",
   "scripts": {
