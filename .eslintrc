@@ -10,7 +10,6 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "tslint-config-prettier"
   ],
   "rules": {
     "@typescript-eslint/no-explicit-any": 0

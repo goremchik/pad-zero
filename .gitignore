@@ -9,3 +9,4 @@ logs
 *.http
 .webpack
 *.docx
+.nyc_output

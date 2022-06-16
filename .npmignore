@@ -4,6 +4,7 @@ src
 tsconfig.json
 tslint.json
 .prettierrc
+.nyc_output
 
 # Files directories
 *.docx

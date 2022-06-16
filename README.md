@@ -1,41 +1,19 @@
-### Web Server
+### Pad Zeros
 
-[![codecov](https://codecov.io/gh/goremchik/web-server/branch/master/graph/badge.svg?token=MO8MYLIF13)](https://codecov.io/gh/goremchik/web-server)
+Add zero symbols at the beginning of number
 
-DB connection variables are defined in .env file.
+## Installation
 
-## Server
+> `npm install pad-zero`
 
-# Run
+# Usage
 
-`npm run server:start` - start builded server app
+Example:
 
-# Build
+```
+import { padZero } from "pad-zero";
 
-`npm run server:build` - build server code
-
-# Watch
-
-`npm start`
-`npm run server:watch` - start server and reload on file changes
-
-# Deploy to EC2#
-
-`cd scripts`
-`./deploy-to-ec2.sh`
-
-## Other
-
-# Prettier
-
-`npm run format` - run prettier auto fix
-`npm run eslint` - run linter check
-
-## AWS
-
-# Lambda
-
-Configure serverless CLI with your AWS credentials. This is necessary for deployment:
-`serverless config credentials --provider aws --key <your_access_key_id> --secret <your_access_key_secret>`
-
-`npm run notifications:deploy` - deploy notification lambda
+console.log(padZero(2, 9)); // 09
+console.log(padZero(4, 47)); // 0047
+console.log(padZero(4)(47)); // 0047 (works with curring)
+```
