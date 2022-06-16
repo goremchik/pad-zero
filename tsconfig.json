@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",                          
-    "module": "commonjs",                    
-    "lib": ["es6"],                     
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es6"],
     "allowJs": true,
-    "outDir": "./dist",                          
+    "outDir": "./dist",
     "baseUrl": "./",
-    "strict": true,         
+    "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
@@ -15,9 +15,6 @@
     "types": ["mocha"],
     "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": [
-    "node_modules",
-      "dist",
-  ],
-  "include": [ "src" ]
+  "exclude": ["node_modules", "dist"],
+  "include": ["src"]
 }

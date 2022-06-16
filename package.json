@@ -4,12 +4,16 @@
   "description": "Pad zeros before number",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint src/**/*.ts",
-    "prettier": "prettier \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "eslint src/**/*.ts",
+    "prettier": "prettier --config ./.prettierrc.js --list-different --ignore-path ./.gitignore .",
+    "format": "npm run prettier -- --write",
     "test": "ts-mocha --type-check -p tsconfig.json src/**/*.spec.ts",
-    "build": "echo \"No build command\" && exit 1",
-    "deploy": "echo \"No deploy command\" && exit 1",
-    "release": "echo \"No release command\" && exit 1"
+    "build": "webpack",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -44,6 +48,7 @@
     "rimraf": "3.0.2",
     "ts-loader": "9.3.0",
     "ts-mocha": "^10.0.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "4.7.3",
     "webpack": "5.73.0",
     "webpack-cli": "4.10.0"
